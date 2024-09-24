@@ -1,0 +1,234 @@
+/* Reset styles for consistent box-sizing and margin/padding removal */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #f4f4f4;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0077cc;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #005cbf;
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth scroll for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333333;
+    background-color: #f4f4f4;
+}
+
+/* Header styles */
+header {
+    padding: 2rem;
+    color: #ffffff;
+    text-align: center;
+    background: linear-gradient(135deg, #005cbf, #0077cc);
+}
+
+/* Main content area */
+main {
+    max-width: 1200px;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+main section {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%);
+    animation: slide-in 0.5s forwards;
+}
+
+/* Footer styles */
+footer {
+    padding: 2rem;
+    color: #ffffff;
+    text-align: center;
+    background-color: #005cbf;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Navigation styles */
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1.5rem;
+}
+
+/* Navigation link styles */
+nav ul li a {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* General link hover and focus styles */
+a:hover,
+a:focus {
+    color: #ffc720;
+    background-color: #003d99;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Footer link hover and focus styles */
+footer a:hover,
+footer a:focus {
+    text-decoration: underline;
+}
+
+/* Navigation link hover and focus styles */
+nav ul li a:hover,
+nav ul li a:focus {
+    text-decoration: underline;
+    background-color: rgb(255 255 255 / 20%);
+    border-radius: 5px;
+}
+
+/* Headings styles */
+h1,
+h2 {
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #005cbf;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+h2 {
+    color: #005cbf;
+}
+
+/* Styles for images inside figure elements */
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgb(0 0 0 / 20%);
+}
+
+figure img:hover {
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 30%);
+    transition: transform 0.3s ease;
+    transform: scale(1.005);
+}
+
+figcaption {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #555555;
+    text-align: center;
+}
+
+/* Horizontal rule styling */
+hr {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 2px solid #cccccc;
+}
+
+/* Blockquote styling */
+blockquote::before,
+blockquote::after {
+    display: inline;
+    font-size: 1.5em;
+    color: #005cbf;
+    vertical-align: top;
+}
+
+blockquote::before {
+    margin-right: 0.25rem;
+    content: "\201C";
+}
+
+blockquote::after {
+    margin-left: 0.25rem;
+    content: "\201D";
+}
+
+blockquote p {
+    display: inline;
+    margin: 0;
+    font-size: 1.25em;
+}
+
+/* Email and phone link styling */
+a[href^="mailto:"],
+a[href^="tel:"] {
+    color: lightblue;
+}
+
+a[href^="mailto:"]:hover,
+a[href^="tel:"]:hover,
+a[href^="mailto:"]:focus,
+a[href^="tel:"]:focus {
+    padding: 0.25rem;
+    color: #ffc720;
+    text-decoration: none;
+    background-color: #003d99;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive design for smaller screens */
+@media (width <= 768px) {
+    header,
+    footer {
+        padding: 1.5rem;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 1rem 0;
+    }
+}
